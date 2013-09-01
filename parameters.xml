@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document>
+	<parameter name="mnuDisplay" type="numeric">1</parameter>
+	<parameter name="mnuName" type="cdata"><![CDATA[GitHub]]></parameter>
+	<parameter name="mnuPos" type="numeric">2</parameter>
+	<parameter name="template" type="string">static.php</parameter>
+	<parameter name="gihubUser" type="cdata"><![CDATA[h5bp]]></parameter>
+	<parameter name="githubRepo" type="cdata"><![CDATA[html5-boilerplate]]></parameter>
+	<parameter name="githubBranch" type="cdata"><![CDATA[]]></parameter>
+	<parameter name="jquery" type="numeric">1</parameter>
+</document>

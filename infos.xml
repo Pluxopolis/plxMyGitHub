@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[MyGitHub]]></title>
+	<author><![CDATA[Stéphane F.]]></author>
+	<version>1.0</version>
+	<date>12/07/2012</date>
+	<site>http://pluxopolis.net</site>
+	<description><![CDATA[Plugin that lets you easily embed a Github repo onto your site]]></description>
+	<requirements></requirements>
+</document>

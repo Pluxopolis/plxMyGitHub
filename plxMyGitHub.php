@@ -37,7 +37,7 @@ class plxMyGitHub extends plxPlugin {
 	 * @return	stdio
 	 * @author	Stephane F
 	 **/
-    public function plxShowConstruct() {
+	public function plxShowConstruct() {
 
 		# infos sur la page statique
 		$string  = "if(\$this->plxMotor->mode=='github') {";
@@ -53,7 +53,7 @@ class plxMyGitHub extends plxPlugin {
 		$string .= "	\$this->plxMotor->aStats = array_merge(\$this->plxMotor->aStats, \$array);";
 		$string .= "}";
 		echo "<?php ".$string." ?>";
-    }
+	}
 
 	/**
 	 * Méthode de traitement du hook plxMotorPreChauffageBegin
@@ -61,7 +61,7 @@ class plxMyGitHub extends plxPlugin {
 	 * @return	stdio
 	 * @author	Stephane F
 	 **/
-    public function plxMotorPreChauffageBegin() {
+	public function plxMotorPreChauffageBegin() {
 
 		$template = $this->getParam('template')==''?'static.php':$this->getParam('template');
 
@@ -75,7 +75,7 @@ class plxMyGitHub extends plxPlugin {
 		";
 
 		echo "<?php ".$string." ?>";
-    }
+	}
 
 	/**
 	 * Méthode de traitement du hook plxShowStaticListEnd
@@ -83,7 +83,7 @@ class plxMyGitHub extends plxPlugin {
 	 * @return	stdio
 	 * @author	Stephane F
 	 **/
-    public function plxShowStaticListEnd() {
+	public function plxShowStaticListEnd() {
 
 		# ajout du menu pour accèder à la page de github
 		if($this->getParam('mnuDisplay')) {
@@ -91,7 +91,7 @@ class plxMyGitHub extends plxPlugin {
 			echo "<?php array_splice(\$menus, ".($this->getParam('mnuPos')-1).", 0, '<li><a class=\"static '.\$class.'\" href=\"'.\$this->plxMotor->urlRewrite('?github').'\">".$this->getParam('mnuName')."</a></li>'); ?>";
 		}
 
-    }
+	}
 
 	/**
 	 * Méthode qui ajoute les déclarations dans la partie head du site coté visiteurs

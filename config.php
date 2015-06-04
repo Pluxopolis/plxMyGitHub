@@ -33,30 +33,45 @@ if ($array = $files->query('/^static(-[a-z0-9-_]+)?.php$/')) {
 }
 
 ?>
-
-<h2><?php echo $plxPlugin->getInfo('title') ?></h2>
-
-<form id="form_plxMyGitHub" action="parametres_plugin.php?p=plxMyGitHub" method="post">
+<style>
+form.inline-form label {
+	width: 300px;
+}
+</style>
+<form class="inline-form" id="form_plxMyGitHub" action="parametres_plugin.php?p=plxMyGitHub" method="post">
 	<fieldset>
-		<p class="field"><label for="id_mnuDisplay"><?php echo $plxPlugin->lang('L_MENU_DISPLAY') ?>&nbsp;:</label></p>
-		<?php plxUtils::printSelect('mnuDisplay',array('1'=>L_YES,'0'=>L_NO),$mnuDisplay); ?>
-		<p class="field"><label for="id_mnuName"><?php $plxPlugin->lang('L_MENU_TITLE') ?>&nbsp;:</label></p>
-		<?php plxUtils::printInput('mnuName',$mnuName,'text','20-20') ?>
-		<p class="field"><label for="id_mnuPos"><?php $plxPlugin->lang('L_MENU_POS') ?>&nbsp;:</label></p>
-		<?php plxUtils::printInput('mnuPos',$mnuPos,'text','2-5') ?>
-		<p class="field"><label for="id_template"><?php $plxPlugin->lang('L_TEMPLATE') ?>&nbsp;:</label></p>
-		<?php plxUtils::printSelect('template', $aTemplates, $template) ?>
-		<p class="field"><label for="id_jquery"><?php echo $plxPlugin->lang('L_JQUERY') ?>&nbsp;:</label></p>
-		<?php plxUtils::printSelect('jquery',array('1'=>L_YES,'0'=>L_NO),$jquery); ?>
-		<p class="field"><label for="id_gihubUser"><?php $plxPlugin->lang('L_GITHUB_USER') ?>&nbsp;:</label></p>
-		<?php plxUtils::printInput('gihubUser',$plxPlugin->getParam('gihubUser'),'text','20-50') ?>
-		<p class="field"><label for="id_githubRepo"><?php $plxPlugin->lang('L_GITHUB_REPO') ?>&nbsp;:</label></p>
-		<?php plxUtils::printInput('githubRepo',$plxPlugin->getParam('githubRepo'),'text','20-50') ?>
-		<p class="field"><label for="id_githubBranch"><?php $plxPlugin->lang('L_GITHUB_BRANCH') ?>&nbsp;:</label></p>
-		<?php plxUtils::printInput('githubBranch',$plxPlugin->getParam('githubBranch'),'text','20-50') ?>
-
-
 		<p>
+			<label for="id_mnuDisplay"><?php echo $plxPlugin->lang('L_MENU_DISPLAY') ?>&nbsp;:</label>
+			<?php plxUtils::printSelect('mnuDisplay',array('1'=>L_YES,'0'=>L_NO),$mnuDisplay); ?>
+		<p>
+			<label for="id_mnuName"><?php $plxPlugin->lang('L_MENU_TITLE') ?>&nbsp;:</label>
+			<?php plxUtils::printInput('mnuName',$mnuName,'text','20-20') ?>
+		</p>
+		<p>
+			<label for="id_mnuPos"><?php $plxPlugin->lang('L_MENU_POS') ?>&nbsp;:</label>
+			<?php plxUtils::printInput('mnuPos',$mnuPos,'text','2-5') ?>
+		</p>
+		<p>
+			<label for="id_template"><?php $plxPlugin->lang('L_TEMPLATE') ?>&nbsp;:</label>
+			<?php plxUtils::printSelect('template', $aTemplates, $template) ?>
+		</p>
+		<p>
+			<label for="id_jquery"><?php echo $plxPlugin->lang('L_JQUERY') ?>&nbsp;:</label>
+			<?php plxUtils::printSelect('jquery',array('1'=>L_YES,'0'=>L_NO),$jquery); ?>
+		</p>
+		<p>
+			<label for="id_gihubUser"><?php $plxPlugin->lang('L_GITHUB_USER') ?>&nbsp;:</label>
+			<?php plxUtils::printInput('gihubUser',$plxPlugin->getParam('gihubUser'),'text','20-50') ?>
+		</p>
+		<p>
+			<label for="id_githubRepo"><?php $plxPlugin->lang('L_GITHUB_REPO') ?>&nbsp;:</label>
+			<?php plxUtils::printInput('githubRepo',$plxPlugin->getParam('githubRepo'),'text','20-50') ?>
+		</p>
+		<p>
+			<label for="id_githubBranch"><?php $plxPlugin->lang('L_GITHUB_BRANCH') ?>&nbsp;:</label>
+			<?php plxUtils::printInput('githubBranch',$plxPlugin->getParam('githubBranch'),'text','20-50') ?>
+		</p>
+		<p class="in-action-bar">
 			<?php echo plxToken::getTokenPostMethod() ?>
 			<input type="submit" name="submit" value="<?php $plxPlugin->lang('L_SAVE') ?>" />
 		</p>
